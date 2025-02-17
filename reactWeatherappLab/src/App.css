@@ -1,0 +1,129 @@
+/* src/App.css */
+
+.weather-container, .about-container, .error-page {
+  text-align: center;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f4f7fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  max-width: 250px;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #0056b3;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: skyblue; /* Orange shade */
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: skyblue; /* Slightly darker orange */
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.weather-info, .about-container {
+  margin-top: 20px;
+}
+
+.weather-info h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+nav {
+  margin-bottom: 20px;
+  background-color: #007bff;
+  padding: 10px 0;
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #ffeb3b;
+}
+
+.about-container, .error-page {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.about-container h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  /* Mobile responsiveness */
+  .weather-container, .about-container, .error-page {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  input {
+    width: 80%;
+    max-width: none;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
