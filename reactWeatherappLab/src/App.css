@@ -1,5 +1,16 @@
 /* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: skyblue;
+  color: black;
+  line-height: 1.6;
+  background-image: url("https://media2.giphy.com/media/4N1FZFE5AGO3qrUGkw/giphy.gif?cid=6c09b9523rgmguy0sewjdt9a7hr14j8n0gxzu0w5hnfc7kn9&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g");
 
+
+    display: flex;            
+    justify-content: center;   
+    align-items: center;      
+}
 .weather-container, .about-container, .error-page {
   text-align: center;
   margin: 50px auto;
@@ -7,6 +18,7 @@
   max-width: 600px;
   padding: 20px;
   border-radius: 8px;
+  background-image: url("https://i.gifer.com/CtmQ.gif");
   background-color: #f4f7fa;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -23,7 +35,7 @@ input {
 }
 
 input:focus {
-  border-color: #0056b3;
+  border-color: skyblue;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
 }
@@ -65,8 +77,8 @@ button:active {
 
 nav {
   margin-bottom: 20px;
-  background-color: #007bff;
-  padding: 10px 0;
+  background-color: blue;
+  padding: 5px 0;
   border-radius: 8px;
 }
 
@@ -78,7 +90,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {

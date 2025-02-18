@@ -1,5 +1,5 @@
 // src/Weather.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ const Weather = () => {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState('');
+  const [fetchWeather, setFetchWeather] = useState(false);  // New state to trigger weather fetch
 
   const apiKey = '57882f1ea616822154c6d2c86cdb5883';  // Replace this with your actual API key
   const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
@@ -28,10 +29,18 @@ const Weather = () => {
     }
   };
 
+  // useEffect to fetch weather data when fetchWeather changes to true
+  useEffect(() => {
+    if (fetchWeather && city) {
+      getWeatherData(city);
+      setFetchWeather(false);  // Reset fetchWeather after fetching
+    }
+  }, [fetchWeather, city]);  // Dependency array: when fetchWeather or city changes
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (city) {
-      getWeatherData(city);
+      setFetchWeather(true);  // Set fetchWeather to true to trigger useEffect
     }
   };
 
